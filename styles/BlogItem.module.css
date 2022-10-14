@@ -1,0 +1,12 @@
+
+.container {
+  padding: 1rem 2rem;
+  background-color: rgb(248, 248, 248);
+  cursor: pointer;
+  margin-bottom: 2em;
+}
+
+.date {
+  font-size: .75em;
+  color: rgb(134, 134, 134);
+}

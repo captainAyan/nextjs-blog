@@ -1,0 +1,22 @@
+.navbar ul {
+  height: 5vh;
+  display:flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin:0;
+}
+
+.navbar ul li {
+  width: 100px;
+  text-align: center;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 2.5;
+}
+
+.navbar ul li:hover {
+  display: block;
+  border-bottom: 4px solid black;
+}

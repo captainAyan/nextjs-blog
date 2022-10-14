@@ -1,0 +1,77 @@
+.main {
+  min-height: 95vh; /*rest of 5vh is used for navbar*/
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  font-weight: lighter;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 2rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  max-width: 560px;
+  font-weight: lighter;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+.container {
+  padding: 2em 1em 2em 1em;
+  width: 100%;
+}
+@media (min-width:320px)  {
+  .container {
+    padding: 2em 1em 2em 1em;
+  }
+}
+@media (min-width:480px)  {
+  .container {
+    padding: 2em 2em 2em 2em;
+  }
+}
+@media (min-width:600px)  {
+  .container {
+    padding: 2em 4em 2em 4em;
+  }
+}
+@media (min-width:801px) {
+  .container {
+    width: 720px;
+    margin:auto;
+  }
+}
+
+.blog_container {
+  font-size: 18px;
+}
+
+.blog_container .content {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.blog_container .content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
