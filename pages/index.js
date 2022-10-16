@@ -8,6 +8,8 @@ import styles from "../styles/Main.module.css";
 export default function Home(props) {
   const [blogs, setBlogs] = useState(props.blogs);
 
+  console.log("ENV VAR", process.env.NEXT_PUBLIC_VERCEL_URL);
+
   return (
     <div className={styles.container}>
       <Head>
