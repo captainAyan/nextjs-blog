@@ -20,7 +20,10 @@ export default function Contact() {
     const data = { name, email, description, phone };
 
     try {
-      await axios.post("http://localhost:3000/api/contact", data);
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/contact`,
+        data
+      );
       alert("Thanks for your feedback");
     } catch (e) {
       console.log(e);
