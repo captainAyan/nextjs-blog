@@ -1,5 +1,5 @@
 .main {
-  min-height: 95vh; /*rest of 5vh is used for navbar*/
+  min-height: 90vh; /*rest of 5vh is used for navbar*/
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -12,20 +12,19 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
-  font-weight: lighter;
-}
-
-.title,
-.description {
-  text-align: center;
+  font-weight: 200;
 }
 
 .description {
   margin: 2rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
-  max-width: 560px;
-  font-weight: lighter;
+  font-weight: 300;
+}
+
+.title,
+.description {
+  text-align: center;
 }
 
 .logo {
@@ -74,4 +73,16 @@
   margin-right: auto;
   max-width: 100%;
   border-radius: 8px;
+}
+
+.btn {
+  display: inline;
+  width: auto;
+  margin-top: 24px;
+  padding: 12px 32px;
+  border-radius: 8px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
