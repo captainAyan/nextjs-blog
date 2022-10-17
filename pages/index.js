@@ -58,9 +58,7 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps() {
-  const blogs = (
-    await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/blogs?type=latest`)
-  ).data;
+  const blogs = (await axios.get(`/api/blogs?type=latest`)).data;
 
   return {
     props: { blogs },

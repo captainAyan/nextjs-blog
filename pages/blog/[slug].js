@@ -57,11 +57,7 @@ export default function Blog(props) {
 }
 
 export async function getServerSideProps(context) {
-  const blog = (
-    await axios.get(
-      `${process.env.NEXT_PUBLIC_URL}/api/blog?slug=${context.query.slug}`
-    )
-  ).data;
+  const blog = (await axios.get(`/api/blog?slug=${context.query.slug}`)).data;
 
   return {
     props: { blog },
