@@ -1,6 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
 
+import BlogSchema from "../models/Blog";
+import connectDb from "../middleware/database";
+
 import BlogItem from "../components/BlogItem";
 import styles from "../styles/Main.module.css";
 
@@ -67,13 +70,31 @@ export default function Blogs(props) {
 }
 
 export async function getServerSideProps(context) {
-  const page = context.query.page ? context.query.page : 0;
+  const db = await connectDb();
 
-  const { blogs, skip, limit, total } = (
-    await axios.get(`/api/blogs?page=${page}`)
-  ).data;
+  const page =
+    parseInt(context.query.page, 10) > 0 ? parseInt(context.query.page, 10) : 0;
+  const limit = 5;
+
+  const skip = page * limit;
+
+  const total = await BlogSchema.find().count();
+
+  const blogs = await BlogSchema.find()
+    .sort("-created_at")
+    .select(["-content"])
+    .skip(page * limit)
+    .limit(limit);
+
+  db.disconnect();
 
   return {
-    props: { blogs, page, skip, limit, total },
+    props: {
+      blogs: JSON.parse(JSON.stringify(blogs)),
+      page,
+      skip,
+      limit,
+      total,
+    },
   };
 }

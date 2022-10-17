@@ -5,6 +5,9 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
+import BlogSchema from "../../models/Blog";
+import connectDb from "../../middleware/database";
+
 import styles from "../../styles/Main.module.css";
 
 export default function Blog(props) {
@@ -57,9 +60,14 @@ export default function Blog(props) {
 }
 
 export async function getServerSideProps(context) {
-  const blog = (await axios.get(`/api/blog?slug=${context.query.slug}`)).data;
+  const { slug } = context.params;
+  const db = await connectDb();
+
+  const blog = await BlogSchema.findOne({ slug });
+
+  db.disconnect();
 
   return {
-    props: { blog },
+    props: { blog: JSON.parse(JSON.stringify(blog)) },
   };
 }

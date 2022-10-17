@@ -2,13 +2,14 @@ import axios from "axios";
 import { useState } from "react";
 import Head from "next/head";
 
+import BlogSchema from "../models/Blog";
+import connectDb from "../middleware/database";
+
 import BlogItem from "../components/BlogItem";
 import styles from "../styles/Main.module.css";
 
 export default function Home(props) {
   const [blogs, setBlogs] = useState(props.blogs);
-
-  console.log("ENV VAR", process.env.NEXT_PUBLIC_URL);
 
   return (
     <div className={styles.container}>
@@ -58,9 +59,15 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps() {
-  const blogs = (await axios.get(`/api/blogs?type=latest`)).data;
+  const db = await connectDb();
+  const blogs = await BlogSchema.find()
+    .sort("-created_at")
+    .select(["-content"])
+    .limit(4);
+
+  db.disconnect();
 
   return {
-    props: { blogs },
+    props: { blogs: JSON.parse(JSON.stringify(blogs)) },
   };
 }
