@@ -70,9 +70,7 @@ export async function getServerSideProps(context) {
   const page = context.query.page ? context.query.page : 0;
 
   const { blogs, skip, limit, total } = (
-    await axios.get(
-      `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/blogs?page=${page}`
-    )
+    await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/blogs?page=${page}`)
   ).data;
 
   return {

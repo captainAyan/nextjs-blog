@@ -8,7 +8,7 @@ import styles from "../styles/Main.module.css";
 export default function Home(props) {
   const [blogs, setBlogs] = useState(props.blogs);
 
-  console.log("ENV VAR", process.env.NEXT_PUBLIC_VERCEL_URL);
+  console.log("ENV VAR", process.env.NEXT_PUBLIC_URL);
 
   return (
     <div className={styles.container}>
@@ -59,9 +59,7 @@ export default function Home(props) {
 
 export async function getServerSideProps() {
   const blogs = (
-    await axios.get(
-      `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/blogs?type=latest`
-    )
+    await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/blogs?type=latest`)
   ).data;
 
   return {

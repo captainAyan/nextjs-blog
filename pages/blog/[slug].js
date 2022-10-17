@@ -59,7 +59,7 @@ export default function Blog(props) {
 export async function getServerSideProps(context) {
   const blog = (
     await axios.get(
-      `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/blog?slug=${context.query.slug}`
+      `${process.env.NEXT_PUBLIC_URL}/api/blog?slug=${context.query.slug}`
     )
   ).data;
 

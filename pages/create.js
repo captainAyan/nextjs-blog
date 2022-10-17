@@ -20,10 +20,7 @@ export default function Contact() {
     const data = { title, description, date, content, password };
 
     try {
-      await axios.post(
-        `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/create`,
-        data
-      );
+      await axios.post(`${process.env.NEXT_PUBLIC_URL}/api/create`, data);
       alert("Blog Saved");
     } catch (e) {
       console.log(e);
