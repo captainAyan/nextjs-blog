@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 import styles from "../styles/Main.module.css";
-import contactStyles from "../styles/Form.module.css";
+import formStyles from "../styles/Form.module.css";
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
@@ -40,15 +40,15 @@ export default function Contact() {
     <div className={styles.container}>
       <h1>Create Blog</h1>
 
-      <div className={contactStyles.formContainer}>
+      <div className={formStyles.formContainer}>
         <form onSubmit={handleSubmit}>
-          <div className={contactStyles.mb3}>
-            <label htmlFor="title" className={contactStyles.formLabel}>
+          <div className={formStyles.mb3}>
+            <label htmlFor="title" className={formStyles.formLabel}>
               Title
             </label>
             <input
               type="text"
-              className={contactStyles.formControl}
+              className={formStyles.formControl}
               id="title"
               name="title"
               value={title}
@@ -56,13 +56,13 @@ export default function Contact() {
             />
           </div>
 
-          <div className={contactStyles.mb3}>
-            <label htmlFor="description" className={contactStyles.formLabel}>
+          <div className={formStyles.mb3}>
+            <label htmlFor="description" className={formStyles.formLabel}>
               Description
             </label>
             <input
               type="text"
-              className={contactStyles.formControl}
+              className={formStyles.formControl}
               id="description"
               name="description"
               value={description}
@@ -70,13 +70,13 @@ export default function Contact() {
             />
           </div>
 
-          <div className={contactStyles.mb3}>
-            <label htmlFor="date" className={contactStyles.formLabel}>
+          <div className={formStyles.mb3}>
+            <label htmlFor="date" className={formStyles.formLabel}>
               Date
             </label>
             <input
               type="text"
-              className={contactStyles.formControl}
+              className={formStyles.formControl}
               id="date"
               name="date"
               value={date}
@@ -84,13 +84,13 @@ export default function Contact() {
             />
           </div>
 
-          <div className={contactStyles.mb3}>
-            <label htmlFor="content" className={contactStyles.formLabel}>
+          <div className={formStyles.mb3}>
+            <label htmlFor="content" className={formStyles.formLabel}>
               Content
             </label>
             <textarea
               type="text"
-              className={contactStyles.formControl}
+              className={formStyles.formControl}
               id="content"
               name="content"
               rows="10"
@@ -99,13 +99,13 @@ export default function Contact() {
             />
           </div>
 
-          <div className={contactStyles.mb3}>
-            <label htmlFor="password" className={contactStyles.formLabel}>
+          <div className={formStyles.mb3}>
+            <label htmlFor="password" className={formStyles.formLabel}>
               Password
             </label>
             <input
               type="password"
-              className={contactStyles.formControl}
+              className={formStyles.formControl}
               id="password"
               name="password"
               value={password}

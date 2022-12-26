@@ -12,6 +12,7 @@ export default function About(props) {
         Bachelors degree in Commerce.
       </p>
 
+      <hr />
       <h2>Skills</h2>
 
       <h3>Web Development</h3>
@@ -26,11 +27,36 @@ export default function About(props) {
       <h3>Android</h3>
       <p>Java, Kotlin, SQLite, and Xml</p>
 
-      <h3>Tools</h3>
-      <p>Figma, Postman, Vs Code, Git, Android Studio</p>
-
       <h3>Others</h3>
-      <p>Python, C++, and TypeScript</p>
+      <p>
+        Python <i>(Core)</i>, Php <i>(Core)</i>, C++, and TypeScript
+      </p>
+
+      <h3>Tools</h3>
+      <p>
+        Figma, Postman, Vs Code, Git, Android Studio, PhotoShop, Git, and Github
+      </p>
+
+      <hr />
+      <h2>Certificate</h2>
+
+      <h3>M220JS: MongoDB for JavaScript Developers</h3>
+      <p>
+        <b>Issue Date:</b> 2022-12-04
+      </p>
+      <p>
+        <b>Credential ID:</b> MDBr6rsjdkpwq
+      </p>
+
+      <h3>HackerRank React Basic Certificate</h3>
+      <p>
+        <b>Issue Date:</b> 2022-12-15
+      </p>
+      <p>
+        <b>Credential ID:</b> 24ef942425b3
+      </p>
+
+      <hr />
     </div>
   );
 }

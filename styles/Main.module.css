@@ -1,12 +1,15 @@
-.main {
-  min-height: 90vh; /*rest of 5vh is used for navbar*/
-  padding: 4rem 0;
+.section {
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.row {width: 100%}
+/* .col_1_2 { float: left; width: 50%; text-align: left;}
+.col_2_2 { float: right; width: 50%; text-align: right;} */
 
 .title {
   margin: 0;
@@ -40,11 +43,16 @@
   .container {
     padding: 2em 1em 2em 1em;
   }
+
+  .col_1_2, .col_2_2 {width: 100%; text-align: center;}
 }
 @media (min-width:480px)  {
   .container {
     padding: 2em 2em 2em 2em;
   }
+
+  .col_1_2 { float: left; width: 50%; text-align: left;}
+  .col_2_2 { float: right; width: 50%; text-align: right;}
 }
 @media (min-width:600px)  {
   .container {
@@ -85,4 +93,15 @@
   color: white;
   font-size: 16px;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.testimonial_btn {
+  height: 12px;
+  width: 12px;
+  border: solid black 1px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 24px 8px ;
+  cursor: pointer
 }
