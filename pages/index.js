@@ -3,10 +3,6 @@ import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-import BlogSchema from "../models/Blog";
-import connectDb from "../middleware/database";
-
-import BlogItem from "../components/BlogItem";
 import styles from "../styles/Main.module.css";
 
 import responsiveDesignImage from "../public/images/responsive_design.png";
@@ -28,12 +24,12 @@ export default function Home(props) {
     {
       image: secondTestimonialImage,
       author: "Big Head",
-      text: "We have no regrets! Ayan did a fantastic job at developing web apps.",
+      text: "We have no regrets! Ayan did a fantastic job at developing our web application.",
     },
     {
       image: thirdTestimonialImage,
       author: "Beard Guy",
-      text: "Dude, Ayan is a great programmer! He develops MERN apps like nothing.",
+      text: "Dude, Ayan is a great programmer! He develops MERN apps like nobody's business.",
     },
   ];
 
@@ -58,8 +54,8 @@ export default function Home(props) {
         </h1>
 
         <h1 className={styles.description}>
-          I&apos;m a Full-Stack Developer (MERN), and an Android Developer (Java
-          & Kotlin)
+          I&apos;m a Full-Stack Developer (MERN), an Android Developer (Java &
+          Kotlin), and a Game Developer (Godot)
         </h1>
 
         <a href="#skills" style={{ textDecoration: "none" }}>
@@ -138,34 +134,14 @@ export default function Home(props) {
         </div>
       </div>
 
-      <div className={styles.blog_container}>
-        <h1>Latest Blogs</h1>
-        {blogs.map((blog, i) => {
-          return (
-            <BlogItem
-              key={i}
-              title={blog.title}
-              date={blog.date}
-              description={blog.description}
-              slug={blog.slug}
-            />
-          );
-        })}
+      <div className={styles.section} style={{ height: "100vh" }} id="contact">
+        <h1 className={styles.title}>Contact me</h1>
+        <h1 className={styles.description}>
+          <a href="mailto:ayanchakraborty105@gmail.com">
+            ayanchakraborty105@gmail.com
+          </a>
+        </h1>
       </div>
     </div>
   );
-}
-
-export async function getServerSideProps() {
-  const db = await connectDb();
-  const blogs = await BlogSchema.find()
-    .sort("-created_at")
-    .select(["-content"])
-    .limit(4);
-
-  db.disconnect();
-
-  return {
-    props: { blogs: JSON.parse(JSON.stringify(blogs)) },
-  };
 }
