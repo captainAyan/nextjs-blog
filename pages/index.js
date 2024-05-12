@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
@@ -12,9 +11,7 @@ import firstTestimonialImage from "../public/images/testimonial 1.png";
 import secondTestimonialImage from "../public/images/testimonial 2.png";
 import thirdTestimonialImage from "../public/images/testimonial 3.png";
 
-export default function Home(props) {
-  const [blogs, setBlogs] = useState(props.blogs);
-
+export default function Home() {
   const testimonies = [
     {
       image: firstTestimonialImage,
