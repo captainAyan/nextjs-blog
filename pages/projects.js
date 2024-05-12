@@ -53,11 +53,7 @@ export default function Projects() {
       <h1>Projects</h1>
       <p>
         &nbsp;
-        {selectedTag == "" ? null : (
-          <>
-            Selected tag: <span>#{selectedTag}</span>
-          </>
-        )}
+        {!selectedTag ? null : <>#{selectedTag}</>}
       </p>
 
       <p style={{ wordWrap: "break-word", wordSpacing: "8px" }}>
