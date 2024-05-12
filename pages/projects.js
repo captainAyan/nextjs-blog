@@ -62,9 +62,7 @@ export default function Projects() {
 
       <p style={{ wordWrap: "break-word", wordSpacing: "8px" }}>
         <span>
-          <a href="#" onClick={() => setSeletedTag("")}>
-            All
-          </a>
+          <a href="?">All</a>
           &nbsp;
         </span>
         {tags.map((tag) => {
@@ -78,47 +76,41 @@ export default function Projects() {
       </p>
       <hr />
 
-      {projectTags.lucafy.includes(selectedTag) || selectedTag == "" ? (
+      {projectTags.lucafy.includes(selectedTag) || !selectedTag ? (
         <Lucafy />
       ) : null}
-      {projectTags.quiz.includes(selectedTag) || selectedTag == "" ? (
-        <Quiz />
-      ) : null}
-      {projectTags.accountlite_android.includes(selectedTag) ||
-      selectedTag == "" ? (
+      {projectTags.quiz.includes(selectedTag) || !selectedTag ? <Quiz /> : null}
+      {projectTags.accountlite_android.includes(selectedTag) || !selectedTag ? (
         <AccountLiteAndroid />
       ) : null}
-      {projectTags.accountlite_desktop.includes(selectedTag) ||
-      selectedTag == "" ? (
+      {projectTags.accountlite_desktop.includes(selectedTag) || !selectedTag ? (
         <AccountLiteDesktop />
       ) : null}
-      {projectTags.accountlite_cli.includes(selectedTag) ||
-      selectedTag == "" ? (
+      {projectTags.accountlite_cli.includes(selectedTag) || !selectedTag ? (
         <AccountLiteCLI />
       ) : null}
-      {projectTags.anon_msgs.includes(selectedTag) || selectedTag == "" ? (
+      {projectTags.anon_msgs.includes(selectedTag) || !selectedTag ? (
         <AnonMsgs />
       ) : null}
-      {projectTags.chat_meeting.includes(selectedTag) || selectedTag == "" ? (
+      {projectTags.chat_meeting.includes(selectedTag) || !selectedTag ? (
         <ChatMeeting />
       ) : null}
-      {projectTags.location_share.includes(selectedTag) || selectedTag == "" ? (
+      {projectTags.location_share.includes(selectedTag) || !selectedTag ? (
         <LocationShare />
       ) : null}
-      {projectTags.crappy_birdie.includes(selectedTag) || selectedTag == "" ? (
+      {projectTags.crappy_birdie.includes(selectedTag) || !selectedTag ? (
         <CrappyBirdie />
       ) : null}
-      {projectTags.space_shooter.includes(selectedTag) || selectedTag == "" ? (
+      {projectTags.space_shooter.includes(selectedTag) || !selectedTag ? (
         <SpaceShooter />
       ) : null}
-      {projectTags.pixel_profile_pic.includes(selectedTag) ||
-      selectedTag == "" ? (
+      {projectTags.pixel_profile_pic.includes(selectedTag) || !selectedTag ? (
         <PixelProfilePic />
       ) : null}
-      {projectTags.pixel_art.includes(selectedTag) || selectedTag == "" ? (
+      {projectTags.pixel_art.includes(selectedTag) || !selectedTag ? (
         <PixelArt />
       ) : null}
-      {projectTags.minesweeper.includes(selectedTag) || selectedTag == "" ? (
+      {projectTags.minesweeper.includes(selectedTag) || !selectedTag ? (
         <Minesweeper />
       ) : null}
     </div>
