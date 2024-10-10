@@ -259,4 +259,20 @@ export var data = [
     techUsed: ["TKinter", "Python"],
     tags: ["python", "game", "tkinter"],
   },
+  {
+    title: "Corruptinator",
+    stackInfo: "Python Desktop Application",
+    links: [
+      {
+        url: "https://github.com/captainAyan/corruptinator",
+        label: "Repo",
+      },
+    ],
+    imageUrl:
+      "https://raw.githubusercontent.com/captainayan/corruptinator/refs/heads/main/behold_the_meme.jpg",
+    description:
+      "This application securely performs deletion by overwriting image files with random data, making them unrecoverable. It’s ideal for safely deleting non-sensitive files.",
+    techUsed: ["TKinter", "Python"],
+    tags: ["python", "tkinter", "file manager"],
+  },
 ];
