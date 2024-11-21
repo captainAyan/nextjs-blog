@@ -288,7 +288,7 @@ export var data = [
         label: "Website",
       },
       {
-        url: "https://captainayan.itch.io/dual-racer",
+        url: "https://captainayan.itch.io/dualracer",
         label: "Itch Io Page",
       },
     ],
