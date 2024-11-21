@@ -186,7 +186,7 @@ export var data = [
       "https://raw.githubusercontent.com/captainAyan/crappybirdie/main/docs/poster.png",
     description:
       "A flappy bird like mobile game, developed using Godot Engine.",
-    techUsed: ["Godot Engine", "GDSCript"],
+    techUsed: ["Godot Engine", "GDSript"],
     tags: ["game", "android", "godot"],
   },
   {
@@ -274,5 +274,29 @@ export var data = [
       "This application securely performs deletion by overwriting image files with random data, making them unrecoverable. It’s ideal for safely deleting non-sensitive files.",
     techUsed: ["TKinter", "Python"],
     tags: ["python", "tkinter", "file manager"],
+  },
+  {
+    title: "Dual Racer",
+    stackInfo: "Android Game",
+    links: [
+      {
+        url: "https://github.com/captainAyan/dualracer",
+        label: "Repo",
+      },
+      {
+        url: "https://captainayan.github.io/dualracer/",
+        label: "Website",
+      },
+      {
+        url: "https://captainayan.itch.io/dual-racer",
+        label: "Itch Io Page",
+      },
+    ],
+    imageUrl:
+      "https://raw.githubusercontent.com/captainAyan/dualracer/main/docs/poster.png",
+    description:
+      "Race two boats at once in this fast-paced, action-packed game! Avoid obstacles, rack up points, and see how far you can go. Test your reflexes and multitasking skills as you navigate the waters.",
+    techUsed: ["Godot Engine", "GDScript"],
+    tags: ["game", "godot", "android"],
   },
 ];
