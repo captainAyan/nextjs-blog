@@ -300,4 +300,9 @@ export var games = [
     linkUrl: "https://captainayan.itch.io/dualracer",
     linkText: "Dual Racer by captainAyan",
   },
+  {
+    embedUrl: "https://itch.io/embed/3136821",
+    linkUrl: "https://captainayan.itch.io/spaceshooter",
+    linkText: "Space Shooter by captainAyan",
+  },
 ];
