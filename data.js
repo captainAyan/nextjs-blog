@@ -166,24 +166,20 @@ export var data = [
     stackInfo: "Android Game",
     links: [
       {
-        url: "https://github.com/captainAyan/crappybirdie",
-        label: "Repo",
-      },
-      {
-        url: "https://captainayan.github.io/crappybirdie/",
-        label: "Website",
+        url: "https://captainayan.itch.io/crappybirdie",
+        label: "Itch Io Page and Demo",
       },
       {
         url: "https://soundcloud.com/captainayan/crappy-birdie-theme-music",
         label: "Original Theme Song",
       },
       {
-        url: "https://captainayan.itch.io/crappybirdie",
-        label: "Itch Io Page",
+        url: "https://www.instagram.com/reel/C6luDZYJO4A/",
+        label: "Trailer",
       },
     ],
     imageUrl:
-      "https://raw.githubusercontent.com/captainAyan/crappybirdie/main/docs/poster.png",
+      "https://img.itch.zone/aW1nLzE4NzM5MjE5LnBuZw==/original/ZSNdRr.png",
     description:
       "A flappy bird like mobile game, developed using Godot Engine.",
     techUsed: ["Godot Engine", "GDSript"],
@@ -280,23 +276,28 @@ export var data = [
     stackInfo: "Android Game",
     links: [
       {
-        url: "https://github.com/captainAyan/dualracer",
-        label: "Repo",
-      },
-      {
-        url: "https://captainayan.github.io/dualracer/",
-        label: "Website",
-      },
-      {
         url: "https://captainayan.itch.io/dualracer",
-        label: "Itch Io Page",
+        label: "Itch Io Page and Demo",
       },
     ],
     imageUrl:
-      "https://raw.githubusercontent.com/captainAyan/dualracer/main/docs/poster.png",
+      "https://img.itch.zone/aW1nLzE4NzM2NzM3LnBuZw==/original/qnB7FC.png",
     description:
       "Race two boats at once in this fast-paced, action-packed game! Avoid obstacles, rack up points, and see how far you can go. Test your reflexes and multitasking skills as you navigate the waters.",
     techUsed: ["Godot Engine", "GDScript"],
     tags: ["game", "godot", "android"],
+  },
+];
+
+export var games = [
+  {
+    embedUrl: "https://itch.io/embed/2760362",
+    linkUrl: "https://captainayan.itch.io/crappybirdie",
+    linkText: "Crappy Birdie by captainAyan",
+  },
+  {
+    embedUrl: "https://itch.io/embed/3122733",
+    linkUrl: "https://captainayan.itch.io/dualracer",
+    linkText: "Dual Racer by captainAyan",
   },
 ];
