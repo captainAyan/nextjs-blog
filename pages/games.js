@@ -13,6 +13,13 @@ export default function Games() {
     <div className={styles.container}>
       <h1>Game</h1>
 
+      <p>
+        <span>Itch Io </span>
+        <a href="https://captainayan.itch.io/" target="_blank" rel="noreferrer">
+          @captainayan
+        </a>
+      </p>
+
       {games.map((game, i) => (
         <iframe
           key={i}
